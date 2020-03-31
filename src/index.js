@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const link = React.createElement(
+    'a',
+    {
+        href: 'https://reactjs.org/',
+        target: '_blank',
+        rel: 'noreferrer noopener',
+    },
+    'Ссылка на reactjs.org',
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const title = React.createElement('h2', null, 'Tacos With Lime');
+const price = React.createElement('p', null, 'Price: 10.99$');
+const button = React.createElement('button', { type: 'button' }, 'Add to cart');
+
+const product = React.createElement('div', null, image, title, price, button);
+
+ReactDOM.render(product, document.getElementById('root'));
