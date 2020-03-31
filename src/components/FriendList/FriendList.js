@@ -5,7 +5,7 @@ import styles from './/FriendList.module.css';
 function FriendList({ friends }) {
     return (
         <ul className={styles.friendList}>
-            {friends.map(({ id, name, avatar, isOnline }, i) => (
+            {friends.map(({ id, name, avatar, isOnline = true }, i) => (
                 <li key={id} className={styles.item}>
                     <span
                         className={styles.status}
@@ -34,7 +34,7 @@ FriendList.propTypes = {
             id: PropTypes.number.isRequired,
             avatar: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
-            isOnline: PropTypes.bool.isRequired,
+            isOnline: PropTypes.bool,
         }),
     ).isRequired,
 };

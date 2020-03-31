@@ -4,10 +4,12 @@ import styles from './App.module.css';
 import user from '../../data/user.json';
 import statistic from '../../data/statistical-data.json';
 import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 import Profile from '../Profile/Profile';
 import Statistic from '../Statistics/Statistics';
 import FriendList from '../FriendList/FriendList';
+import TransactionHistory from '../TransactionHistory/TransactionHistory';
 
 export default function App() {
     return (
@@ -28,6 +30,9 @@ export default function App() {
                 </section>
                 <section>
                     <FriendList friends={friends} />
+                </section>
+                <section>
+                    <TransactionHistory items={transactions} />
                 </section>
             </div>
         </>
