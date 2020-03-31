@@ -2,6 +2,10 @@ body {
     background-color: #e7ecf2;
 }
 
+section {
+    margin-bottom: 50px;
+}
+
 .container {
     text-align: center;
     width: 1200px;
