@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.css';
+import StatItem from './StatItem';
 
 const statsBGColors = ['#4fc4f6', '#a33bf1', '#e64c65', '#21b7c5', '#00ff00'];
 
@@ -25,10 +26,7 @@ function Statistics({ title, stats }) {
                             }`,
                         }}
                     >
-                        <span className={styles.label}>{stat.label}</span>
-                        <span className={styles.percentage}>
-                            {stat.percentage}
-                        </span>
+                        <StatItem {...stat} />
                     </li>
                 ))}
             </ul>

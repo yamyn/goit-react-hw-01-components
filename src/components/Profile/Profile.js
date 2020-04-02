@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 
+import ProfileStat from './ProfileStat';
+
 function Profile({ name, avatar, tag, location, stats }) {
     const statsKeys = Object.keys(stats);
 
@@ -21,10 +23,9 @@ function Profile({ name, avatar, tag, location, stats }) {
             </div>
 
             <ul className={styles.stats}>
-                {statsKeys.map(key => (
-                    <li key={stats[key]} className={styles.statsItem}>
-                        <span className={styles.label}>{key}</span>
-                        <span className={styles.quantity}>{stats[key]}</span>
+                {statsKeys.map(statKey => (
+                    <li key={stats[statKey]} className={styles.statsItem}>
+                        <ProfileStat stats={stats} statKey={statKey} />
                     </li>
                 ))}
             </ul>

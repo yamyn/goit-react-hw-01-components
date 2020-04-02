@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
 
+import Transaction from './Transaction';
+
 function TransactionHistory({ items }) {
     return (
         <table className={styles.transactionHistory}>
@@ -24,9 +26,11 @@ function TransactionHistory({ items }) {
                             } `,
                         }}
                     >
-                        <td>{type}</td>
-                        <td>{amount}</td>
-                        <td>{currency}</td>
+                        <Transaction
+                            type={type}
+                            amount={amount}
+                            currency={currency}
+                        />
                     </tr>
                 ))}
             </tbody>
