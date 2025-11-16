@@ -15,12 +15,12 @@
         "@testing-library/user-event": "7.2.1",
         "react": "16.13.1",
         "react-dom": "16.13.1",
-        "react-scripts": "3.4.1"
+        "react-scripts": "5.0.1"
     },
     "devDependencies": {
         "commitizen": "4.0.3",
         "cz-conventional-changelog": "3.1.0",
-        "eslint": "6.8.0",
+        "eslint": "9.39.1",
         "eslint-config-airbnb": "^18.1.0",
         "eslint-config-airbnb-base": "14.1.0",
         "eslint-config-prettier": "6.10.1",
